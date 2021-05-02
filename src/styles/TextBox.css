@@ -1,7 +1,13 @@
 #content-area {
-    padding: 2em;
+    padding: 2rem;
 }
 
 #break-text-area {
     font-size: 2rem;
+    width: 100%;
+}
+
+label {
+    display: block;
+    font-size: 1.25rem;
 }

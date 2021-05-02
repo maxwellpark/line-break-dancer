@@ -13,24 +13,37 @@ const TextBox = () => {
     useEffect(() => {}, []);
 
     return (
-        <div id="content-area">
-            <label htmlFor="break-text-area"></label>
-            <textarea
-                id="break-text-area"
-                name="break-text-area"
-                rows="12"
-                cols="64"
-                ref={(x) => {
-                    textArea = x;
-                }}
-                onKeyUp={(e) => {
-                    setContent(e.target.value);
-                    console.log(content);
-                }}
-            ></textarea>
-            <button type="button" className="btn btn-primary" onClick={handleBreaks}>
-                Dance
-            </button>
+        <div id="content-area" className="container">
+            <div class="row">
+                <div className="col-md-10 offset-1">
+                    <label htmlFor="break-text-area">Enter text:</label>
+                    <textarea
+                        id="break-text-area"
+                        name="break-text-area"
+                        rows="10"
+                        cols="64"
+                        ref={(x) => {
+                            textArea = x;
+                        }}
+                        onKeyUp={(e) => {
+                            setContent(e.target.value);
+                            console.log(content);
+                        }}
+                    ></textarea>
+                </div>
+            </div>
+            <div className="row button-container">
+                <div className="col-md-8 offset-2 pull-right">
+                    <button
+                        id="dance-button"
+                        type="button"
+                        className="btn btn-primary"
+                        onClick={handleBreaks}
+                    >
+                        Dance
+                    </button>
+                </div>
+            </div>
         </div>
     );
 };
