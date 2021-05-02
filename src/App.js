@@ -5,7 +5,7 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">Line Break Dancer</header>
-            <div id="main-content">
+            <div id="App-content">
                 <TextBox></TextBox>
             </div>
             <footer></footer>
